@@ -21,11 +21,11 @@ import {
     Transaction,
   } from "@solana/web3.js";
 
-  export const DEFAULT_SOL_ADDRESS: PublicKey = new PublicKey(
+  const DEFAULT_SOL_ADDRESS: PublicKey = new PublicKey(
     "5SVgMJHrMLYGfPw9nYpPuH6DDWpbNAbs5Dm7kyyREhRR",
   );
   
-  export const DEFAULT_SOL_AMOUNT: number = 1.0;
+  const DEFAULT_SOL_AMOUNT: number = 1.0;
   
   //GET req -> returns the action metadeta as response(which would be unfurled into a blink by supported client)
   export const GET = async (req: Request) => {
