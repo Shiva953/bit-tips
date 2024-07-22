@@ -6,7 +6,7 @@ import { Action, Blink, ActionsRegistry, type ActionAdapter } from "@dialectlabs
 import { useAction, useActionsRegistryInterval } from '@dialectlabs/blinks/react';
 
 export const ManyActions = ({ adapter }: { adapter: ActionAdapter }) => {
-    const apiUrls = useMemo(() => (['http://localhost:3000/api/actions/tip']), []);
+    const apiUrls = useMemo(() => (['https://bit-tips.vercel.app/api/actions/tip']), []);
     const [actions, setActions] = useState<Action[]>([]);
     
     useEffect(() => {
