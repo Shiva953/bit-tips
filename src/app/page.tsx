@@ -40,8 +40,8 @@ export default function Home(){
       <ConnectionProvider endpoint={endpoint}>
       <WalletProvider wallets={wallets} autoConnect>
         <WalletModalProvider>
-          <WalletMultiButton className="m-8"/>
-          <div className='mx-auto'>
+          {/* <WalletMultiButton className="m-8"/> */}
+          <div className='mx-auto my-8'>
             {isRegistryLoaded ? <ManyActions adapter={adapter} /> : null}
             </div>
             </WalletModalProvider>
