@@ -112,7 +112,7 @@ import {
       }
   
       const connection = new Connection(
-        process.env.SOLANA_RPC! || clusterApiUrl("devnet"), "confirmed"
+        process.env.SOLANA_RPC! || clusterApiUrl("mainnet-beta"), "confirmed"
       );
   
       
@@ -139,6 +139,7 @@ import {
       transaction.recentBlockhash = (
         await connection.getLatestBlockhash()
       ).blockhash;
+
   
       // response for the POST req is in this format
       // it signs the txn, base64 encodes it, POST response form => {base64 encoded txn, message}

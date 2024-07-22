@@ -19,13 +19,13 @@ require('@solana/wallet-adapter-react-ui/styles.css');
 export default function Home(){
     // SHOULD be the only instance running (since it's launching an interval)
     const { isRegistryLoaded } = useActionsRegistryInterval();
-    const connection = new Connection(clusterApiUrl("devnet"), "confirmed")
+    const connection = new Connection(clusterApiUrl("mainnet-beta"), "confirmed")
     const { adapter } = useActionAdapter(connection);
-    const network = WalletAdapterNetwork.Devnet;
+    const network = WalletAdapterNetwork.Mainnet;
     // const API_KEY = process.env.HELIUS_API_KEY!;
     // You can also provide a custom RPC endpoint.
     const endpoint = useMemo(() => clusterApiUrl(network), [network]);
-    // const endpoint = `https://mainnet.helius-rpc.com/?api-key=8b5f554c-f521-4d05-b6a6-eb3071c87768`
+    
 
     const wallets = useMemo(
         () => [
