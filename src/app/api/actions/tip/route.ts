@@ -1,7 +1,3 @@
-/**
- * Solana Actions Example
- */
-
 import {
     ActionPostResponse,
     ACTIONS_CORS_HEADERS,
@@ -46,29 +42,29 @@ import {
         links: {
           actions: [
             {
-              label: "Send 0.1 SOL", // button text
+              label: "Send 0.1 SOL",
               href: `${baseHref}&amount=${"0.1"}`,
             },
             {
-              label: "Send 0.5 SOL", // button text
+              label: "Send 0.5 SOL",
               href: `${baseHref}&amount=${"0.5"}`,
             },
             {
-              label: "Send 1 SOL", // button text
+              label: "Send 1 SOL",
               href: `${baseHref}&amount=${"1"}`,
             },
             {
-              label: "Send SOL", // button text
+              label: "Send SOL",
               href: `/api/actions/tip?to={recipient}&amount={amount}`, // this href will have a text input
               parameters: [
                 {
-                  name: "amount", // parameter name in the `href` above
-                  label: "Amount(in SOL)", // placeholder of the text input
+                  name: "amount", 
+                  label: "Amount(in SOL)",
                   required: true,
                 },
                 {
-                    name: "recipient", // parameter name in the `href` above
-                    label: "Wallet Address to be tipped", // placeholder of the text input
+                    name: "recipient", 
+                    label: "Wallet Address to be tipped", 
                     required: true,
                 },
               ],
@@ -168,7 +164,6 @@ import {
 
   // DO NOT FORGET TO INCLUDE THE `OPTIONS` HTTP METHOD
   // THIS WILL ENSURE CORS WORKS FOR BLINKS
-  //   export const OPTIONS = [GET, POST];
   export const OPTIONS = async (req: Request) => {
     return new Response(null, {
       status: 204,
